@@ -1,0 +1,17 @@
+<p>practice1 works!</p>
+
+
+<button (click)="toggleBackGround()" [ngStyle]="{'background-color': toggle ? '#eee': '#111'}">Toggle Color</button>
+<button class="my-button" (click)="toggleBackGround()" [ngClass]="{ toggleColor: toggle }">Toggle Color</button>
+<div>
+    <input type="number" [(ngModel)]="a" />
+    <input type="number" [(ngModel)]="b" />
+    <button (click)="add()">Submit</button>
+    <p>Sum: {{sum}}</p>
+    <p *ngIf="sum < 0">Negative</p>
+    <p *ngIf="sum > 0">Positive</p>
+    <p *ngIf="sum === 0">Zero</p>
+</div>
+<ol>
+    <li *ngFor="let name of names" (click)="toggleName(name)" [ngClass]="{ checked: name.checked }">{{name.text}}</li>
+</ol>
